@@ -1,0 +1,337 @@
+
+/* mis variables */
+:root{
+    --colorVioleta: hsl(229deg 84% 8% / 80%);
+    --colorNegro: #222222;
+    --colorCeleste: #edf3f780;
+}
+/* mi primera fuente */
+@font-face{
+    src: url('../assets/font/samosan.ttf');
+    font-family: 'myfont';
+}
+
+body{
+    box-sizing: border-box;
+}
+
+/* parte top de la pagina */
+.header{
+    background-color: var(--colorVioleta);
+    display: flex;
+    z-index: 400;
+}
+
+.header-title__container{
+    text-align: center;
+    padding: 15px;
+
+}
+
+.header-title__container img,
+.header-title__container span{
+    vertical-align: middle;
+}
+.header_title{
+    
+    /* background-color: #4da2de; */
+    
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /* margin-left: 20px; */
+
+}
+
+
+
+aside{
+    display: flex;
+    width: 400px;
+    float: left;   
+}
+article{
+    
+    display: flex;
+    width: 65%;
+    
+    
+}
+/* esta parte es del menu */
+
+ nav{
+    /* margin-top: -40px; */
+    position: sticky;
+   
+    top: 0px;
+    background-color: var(--colorCeleste);
+    width: 100%;
+    z-index: 3000;
+    /* display: flex; */
+    
+}
+/* /////////esta es para el menu resposive////// */
+
+
+
+
+
+/* //////////fin menu resposive//////////// */
+.main-menu{
+   background-color: #3ea063;
+   border-bottom: 1px solid rgb(9 117 93);
+   position: relative; /***********esto es para probar posicion del icono menu*********/
+   right: 0px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 0px;
+   
+}
+.main-menu__list{
+    list-style: none;
+    position: absolute;
+    /* width: 400px; */
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+      
+    
+    
+}
+.main-menu__list__item{
+    color: #fff;
+    width: 100px;
+    /* margin-left: 25px; */
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.main-menu__list__item:hover{
+    
+    
+    background-color: #1f8a73;
+    
+    /* text-decoration: underline; */
+    
+} 
+
+/* ******************************FIN@ MENUU******* */
+
+@media screen and (max-width:480px){
+    nav{
+        /* margin-top: -40px; */
+        position: sticky;
+       
+        top: 0px;
+    }
+
+    .icon-menu{
+        position: absolute;
+        display: flex;
+        justify-content: center; 
+        align-items:center;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .icon-menu__bar{
+        background: #fff;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        position: relative;
+        
+    }
+    .icon-menu__bar::after,
+    .icon-menu__bar::before{
+        content: '';
+        background: #fff;
+        display: block;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        top: -.5em;
+        position: absolute;
+    }
+    .icon-menu__bar::after{
+        top: .5em;
+    }
+    .main-menu{
+        display: block;
+    }
+    .main-menu__list{
+        display: block;
+        background: var(--colorVioleta);
+        padding-left: 0px;
+        margin-top: 41px;
+        right: 0px;
+        width: 100%;
+        left: 0px;
+        transform: translateX(-150%);
+        transition: transform .3s;
+    }
+    .main-menu__list__item{
+        padding: 1em;
+        border-bottom: 1px solid #fff;
+        width: auto;
+        text-align: left;
+    }
+   
+    .menu--show{
+        transform: translateX(0%);
+    }
+}
+
+.perfil{
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #edf3f780;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+.perfil-imgcontainer{
+    
+    /* display: block; */
+    height: 300px;
+   margin-top: 20px;
+    
+}
+
+.perfil__img{
+    width: 220px;
+
+    height: 300px;
+    display: block;
+    /* background-color: turquoise; */
+    
+    border-radius: 3px;
+    box-shadow: var(--colorNegro) 1px 1px 5px 1px;
+    /* object-fit: contain; */
+    margin-right: auto;
+    margin-left: auto;
+    
+
+}
+.perfil__name{
+    font-weight: bold;
+    /* margin-top: 30px; */
+    /* font-family: myfont; */
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: var(--colorVioleta);
+    padding-bottom: 10px;
+}
+.perfil__paragraph{
+    text-align: justify;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 20px;
+    padding: 10px;
+}
+
+/* centro y noticias
+ */
+
+ .greeting{
+     background-color: var(--colorCeleste);
+     margin-top: 20px;
+     padding: 10px;
+     width: 100%;
+     
+ }
+ .greeting__hi{
+     margin-top: 0px;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+     color: var(--colorVioleta);
+     font-size: 22px;
+ }
+     /* aqui va el SLIDER */
+ .slider{
+     width: 50%;
+     
+     margin: auto;
+     overflow: hidden;
+ }
+ .slider__images{
+    position: relative;
+    left: 0px;
+    transition: all .5s;
+    height: 250px;
+   
+}
+.slider__imag{
+       
+    height: 250px;
+    
+}
+.slider__nagatior{
+    height: 20px;
+    width: 50%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.slider-nav{
+    width: 13px;
+    height: 13px;
+    background: rgb(131, 138, 240);
+    border-radius: 50%;
+    box-shadow: 2px 3px 2px rgb(108, 101, 199) inset;
+} 
+.slider-nav:hover{
+background: var(--colorVioleta);
+} 
+
+.slider-nav--active{
+    box-shadow: 2px 2px grey;
+    background: var(--colorVioleta);
+}
+
+@media screen and (max-width:480px){
+    .slider{
+        width: 100%;
+        
+        margin: auto;
+        overflow: hidden;
+    }
+}
+
+
+/* parte de abajo */
+.bottom{
+    background-color: #222222;
+    font-family: sans-serif;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 4em;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+
+
+@media screen and (max-width:480px){
+    aside{
+        width: 100%;
+    }
+    article{
+        width: 100%;
+
+    }
+}
